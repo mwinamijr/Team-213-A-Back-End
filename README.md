@@ -71,7 +71,7 @@ Read the [Python Decouple Documentation](https://pypi.org/project/python-decoupl
 
 ## Contributors
 
-- [Wangwe](https://github.com/wwangwe)
+-   [Wangwe](https://github.com/wwangwe)
 
 ## License
 
