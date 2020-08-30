@@ -12,3 +12,6 @@ class PatientHistory(models.Model):
         null=True)
     social_history = models.TextField(blank=True,
         null=True)
+
+    def __str__(self):
+        return self.patient
