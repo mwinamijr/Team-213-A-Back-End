@@ -1,10 +1,7 @@
-from django.urls import path
-from rest_framework.urlpatterns import format_suffix_patterns
-from .views import HistoryListView, HistoryDetail
+from rest_framework.routers import DefaultRouter
+from .views import HistoryViewSet
 
-urlpatterns = [
-    path('patientHistory/', HistoryListView.as_view(), name='history'),
-    path('patientHistory/<int:pk>/', HistoryDetail.as_view(), name='history-detail'),
-]
 
-urlpatterns = format_suffix_patterns(urlpatterns)
+router = DefaultRouter()
+router.register(r'', HistoryViewSet, basename='history')
+urlpatterns = router.urls

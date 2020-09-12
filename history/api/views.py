@@ -49,3 +49,10 @@ class HistoryDetail(APIView):
         history = self.get_object(pk)
         history.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+from rest_framework import viewsets
+
+class HistoryViewSet(viewsets.ModelViewSet):
+    serializer_class = PatientHistorySerializer
+    queryset = PatientHistory.objects.all()
